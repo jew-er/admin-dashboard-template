@@ -1,7 +1,9 @@
 import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Dashboard.vue";
+import VueApexCharts from "vue-apexcharts";
 
+Vue.use(VueApexCharts);
 Vue.use(Router);
 
 export default new Router({
@@ -19,6 +21,21 @@ export default new Router({
       // which is lazy-loaded when the route is visited.
       component: () =>
         import(/* webpackChunkName: "about" */ "./views/Ursa.vue")
+    },
+    {
+      path: "/UserProfile",
+      name: "userprofile",
+      component: () => import("./views/UserProfile.vue")
+    },
+    {
+      path: "/maps",
+      name: "maps",
+      component: () => import("./views/Maps.vue")
+    },
+    {
+      path: "/tablelist",
+      name: "tablelist",
+      component: () => import("./views/TableList.vue")
     }
   ]
 });

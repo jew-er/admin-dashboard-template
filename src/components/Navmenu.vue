@@ -2,9 +2,12 @@
    <div id="nav">
         
             <img class="navbg" v-bind:src="bgpaths[6]">
-            <div class="logo"> logo </div>
-            <router-link to="/"><div>Dashboard</div></router-link>
-            <router-link to="/ursa"><div> User Profile</div></router-link>
+            <div class="logo"><font-awesome-icon icon="home" />  logo </div>
+            <router-link to="/"><div><font-awesome-icon icon="tachometer-alt" />Dashboard</div></router-link>
+            <router-link to="/UserProfile"><div><font-awesome-icon icon="user-circle"/> User Profile</div></router-link>
+            <router-link to="/Maps"><div><font-awesome-icon icon="map-marker-alt"/> Maps</div></router-link>
+            <router-link to="/tablelist"><div><font-awesome-icon icon="table"/>Table List</div></router-link>
+            <router-link to="/ursa"><div><font-awesome-icon icon="atom"/> Crab gifs</div></router-link>
     </div>
 </template>
 

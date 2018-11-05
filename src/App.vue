@@ -19,6 +19,7 @@ export default {
 * {
   margin: 0;
   padding: 0;
+  font-family:cursive;
 }
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
