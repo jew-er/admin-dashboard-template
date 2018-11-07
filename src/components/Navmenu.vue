@@ -1,6 +1,14 @@
 <template>
-   <div id="nav">
-        
+  <div>
+    <div id="navtop">
+      <div class="navtop-leftbox">
+
+      </div>
+      <div class="navtop-rightbox">
+
+      </div>
+    </div>
+    <div id="nav">     
             <img class="navbg" v-bind:src="bgpaths[6]">
             <div class="logo"> <Iconic icon="magnet" fill="white" /> logo </div>
             <router-link to="/">
@@ -32,6 +40,7 @@
                 <p>Crab gifs</p>           
               </div>
             </router-link>
+      </div>
     </div>
 </template>
 
@@ -58,6 +67,14 @@ export default {
 </script>
 
 <style lang="scss">
+#navtop{
+  height: 60px;
+  width: calc(100% - 260px);
+  background: red;
+  position:absolute;
+  box-sizing:border-box;
+  right:0;
+}
 #nav {
   width: 260px;
   height: 100vh;
@@ -69,14 +86,14 @@ export default {
   align-items: center;
   .logo {
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-    width: 200px;
+    width: 220px;
     padding: 20px;
     margin-bottom: 20px;
     display: flex;
     justify-content: space-between;
-    padding-left: 50px;
+    padding-left: 20px;
     box-sizing: border-box;
-    padding-right: 80px;
+    padding-right: 120px;
   }
   a {
     font-weight: bold;

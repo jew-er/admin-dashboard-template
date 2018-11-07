@@ -10,7 +10,7 @@
             </div>
         </div>
         <div class="basiccard-bot">
-             <Iconic fill="grey" :icon="bottomnoteicon" width="16px" height="16px"/> {{ bottomnote }}
+             <Iconic fill="grey" :icon="bottomnoteicon" width="16px" height="16px"/> <p>{{ bottomnote }}</p>
         </div>
     </div>
 </template>
@@ -86,8 +86,8 @@ export default {
     width: 90%;
     height: 10%;
     box-sizing: border-box;
-    svg {
-      font-size: 0.8em;
+    p {
+      margin-left:10px
     }
   }
 }

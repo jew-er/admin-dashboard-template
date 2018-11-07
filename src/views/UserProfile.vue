@@ -57,6 +57,7 @@ export default {
   overflow: hidden;
   position: absolute;
   right: 0;
+  top:60px;
   padding: 35px;
   box-sizing: border-box;
   min-height: 100vh;

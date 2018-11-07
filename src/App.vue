@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Navmenu/>
-    <transition name="slide-fade">
+    <transition name="fade">
     <router-view/>
     </transition>
   </div>
@@ -30,15 +30,10 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
-.slide-fade-enter-active {
-  transition: all 0.1s ease;
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
 }
-.slide-fade-leave-active {
-  transition: all 0.1s cubic-bezier(1, 0.5, 0.8, 1);
-}
-.slide-fade-enter, .slide-fade-leave-to
-/* .slide-fade-leave-active below version 2.1.8 */ {
-  transform: translateX(300px);
+.fade-enter, .fade-leave-to  {
   opacity: 0;
 }
 </style>

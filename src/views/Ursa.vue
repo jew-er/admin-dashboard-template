@@ -24,6 +24,7 @@ export default {
   position: absolute;
   right: 0;
   padding: 10px;
+  top:60px;
   box-sizing: border-box;
   height:100%;
   img {
