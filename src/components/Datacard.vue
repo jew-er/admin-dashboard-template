@@ -1,9 +1,8 @@
 <template>
     <div class="datacard">
         <div class="datacard-top">
-            <div :style="{color: 'hsl('+Math.floor(Math.random()*355)+',100%,60%)' }"
-            class="datacard-i">
-                <font-awesome-icon :icon="dataicon" />
+            <div class="datacard-i">
+                <Iconic :fill="'hsl('+Math.floor(Math.random()*355)+',100%,60%)'" :icon="dataicon"  width="40px" height="40px"/>
             </div>
             <div class="datacard-c">
                 <div>{{ dataname }}</div>
@@ -11,7 +10,7 @@
             </div>
         </div>
         <div class="datacard-bot">
-            <font-awesome-icon :icon="bottomnoteicon" /> {{ bottomnote }}
+            <Iconic fill="grey" :icon="bottomnoteicon" width="16px" height="16px"/> <p>{{ bottomnote }}</p>
         </div>
     </div>
 </template>
@@ -55,6 +54,8 @@ export default {
       height: 100%;
       padding-top: 20px;
       box-sizing: border-box;
+      display: flex;
+      justify-content:center;
       & {
         font-size: 2em;
         //color: rgb(random(255),random(255),random(255));
@@ -82,7 +83,7 @@ export default {
     }
   }
   .datacard-bot {
-    height: 40%;
+    height: 30%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -90,8 +91,9 @@ export default {
     color: rgba(0, 0, 0, 0.4);
     width: 90%;
     box-sizing: border-box;
-    svg {
-      font-size: 0.8em;
+    padding-left: 10px;
+    p{
+      margin-left:10px;
     }
   }
 }

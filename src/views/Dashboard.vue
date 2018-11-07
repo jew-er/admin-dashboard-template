@@ -2,35 +2,35 @@
   <div class="dashboard">
     <div class="datacard-row">
     <Datacard 
-      dataicon="align-right"
+      dataicon="cloud"
       dataname="Capacity"
       datavalue="105GB"
       bottomnote="Updated now"
-      bottomnoteicon="sync-alt"
+      bottomnoteicon="save"
     />
 
     <Datacard 
-      dataicon="anchor"
+      dataicon="app"
       dataname="Revenue"
       datavalue="$1,345"
       bottomnote="Last day"
-      bottomnoteicon="adjust"
+      bottomnoteicon="restart"
     />
 
     <Datacard 
-      dataicon="wind"
+      dataicon="calendar"
       dataname="Errors"
       datavalue="23"
       bottomnote="Last day"
-      bottomnoteicon="clock"
+      bottomnoteicon="resume"
     />
 
     <Datacard 
-      dataicon="heart"
+      dataicon="clock-1"
       dataname="Followers"
       datavalue="+23"
       bottomnote="Updated now"
-      bottomnoteicon="sync"
+      bottomnoteicon="repeat"
     />
 
     </div>
@@ -41,8 +41,8 @@
       title="User Behaviour" 
       paddingtop="140px"
       subtitle="24 Hours performance" 
-      bottomnote="the jews did this" 
-      bottomnoteicon="home">
+      bottomnote="A note was left here" 
+      bottomnoteicon="archive">
         
         <apexcharts width="300" type="pie" :options="chartOptions" :series="series"></apexcharts>
         
@@ -50,7 +50,7 @@
 
       <Basiccard title="Information chart"
       subtitle="performance in the last year"
-      bottomnoteicon="arrow-right"
+      bottomnoteicon="back"
       bottomnote="Updated today"
       height="300px"
       width="50%"
@@ -60,7 +60,7 @@
 
       <Basiccard title="Revenue"
       subtitle="For the year 2018"
-      bottomnoteicon="atom"
+      bottomnoteicon="command"
       bottomnote="Updated 5 minutes ago"
       height="400px"
       width="65%"
@@ -123,7 +123,7 @@ export default {
         },
         {
           name: "Thingler",
-          data:[0, 5, 10, 20,3,40,150]
+          data: [0, 5, 10, 20, 3, 40, 150]
         }
       ],
 
@@ -131,7 +131,7 @@ export default {
 
       //Chart three begins here//
 
-        chart3Options: {
+      chart3Options: {
         plotOptions: {
           bar: {
             horizontal: true
@@ -141,11 +141,13 @@ export default {
           categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999]
         }
       },
-      chart3Series: [{
-        name: 'series-1',
-        data: [30, 40, 45, 50, 49, 60, 70, 91]
-      }],
-    
+      chart3Series: [
+        {
+          name: "series-1",
+          data: [30, 40, 45, 50, 49, 60, 70, 91]
+        }
+      ]
+
       //Chart three ends here
     };
   },
@@ -184,11 +186,11 @@ export default {
   justify-content: space-evenly;
 }
 
-.chartrow{
+.chartrow {
   display: flex;
   flex-wrap: wrap;
   margin-top: 20px;
-  box-sizing:border-box;
+  box-sizing: border-box;
   justify-content: space-between;
 }
 </style>

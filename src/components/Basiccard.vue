@@ -10,7 +10,7 @@
             </div>
         </div>
         <div class="basiccard-bot">
-            <font-awesome-icon :icon="bottomnoteicon" /> {{ bottomnote }}
+             <Iconic fill="grey" :icon="bottomnoteicon" width="16px" height="16px"/> {{ bottomnote }}
         </div>
     </div>
 </template>

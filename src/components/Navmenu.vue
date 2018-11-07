@@ -2,12 +2,36 @@
    <div id="nav">
         
             <img class="navbg" v-bind:src="bgpaths[6]">
-            <div class="logo"><font-awesome-icon icon="home" />  logo </div>
-            <router-link to="/"><div><font-awesome-icon icon="tachometer-alt" />Dashboard</div></router-link>
-            <router-link to="/UserProfile"><div><font-awesome-icon icon="user-circle"/> User Profile</div></router-link>
-            <router-link to="/Maps"><div><font-awesome-icon icon="map-marker-alt"/> Maps</div></router-link>
-            <router-link to="/tablelist"><div><font-awesome-icon icon="table"/>Table List</div></router-link>
-            <router-link to="/ursa"><div><font-awesome-icon icon="atom"/> Crab gifs</div></router-link>
+            <div class="logo"> <Iconic icon="magnet" fill="white" /> logo </div>
+            <router-link to="/">
+              <div>
+                <Iconic width="30px" height = "30px" fill="white" icon="home"/>
+                <p>Dashboard</p>
+              </div>
+            </router-link>
+            <router-link to="/UserProfile">
+              <div>
+                <Iconic width="30px" height = "30px" fill="white" icon="user-3"/>
+                <p>User Profile</p>
+              </div>
+            </router-link>
+            <router-link to="/Maps">
+              <div>
+                <Iconic width="30px" height = "30px" fill="white" icon="map-1"/>
+                <p>Maps</p>
+              </div></router-link>
+            <router-link to="/tablelist">
+              <div>
+                <Iconic width="30px" height = "30px" fill="white" icon="windows-4"/>
+                <p>Table List</p>
+              </div>
+            </router-link>
+            <router-link to="/ursa">
+              <div> 
+                <Iconic width="30px" height = "30px" fill="white" icon="windows-4"/>
+                <p>Crab gifs</p>           
+              </div>
+            </router-link>
     </div>
 </template>
 
@@ -28,7 +52,8 @@ export default {
         "img/backgrounds/bg9.jpeg"
       ]
     };
-  }
+  },
+  components: {}
 };
 </script>
 
@@ -47,12 +72,21 @@ export default {
     width: 200px;
     padding: 20px;
     margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 50px;
+    box-sizing: border-box;
+    padding-right: 80px;
   }
   a {
     font-weight: bold;
+    font-family: "Roboto", sans-serif;
     color: white;
     text-decoration: none;
     margin: 2px;
+    font-size: 0.8em;
+    text-transform: uppercase;
+
     &.router-link-exact-active {
       color: springgreen;
 
@@ -70,9 +104,13 @@ export default {
       padding: 15px;
       border-radius: 5px;
       display: flex;
-      justify-content: center;
+      padding-left: 25px;
+      justify-content: flex-start;
       align-items: center;
       transition: background 0.1s ease-in;
+      p {
+        margin-left: 15px;
+      }
       &:hover {
         background: rgba(255, 255, 255, 0.1);
       }

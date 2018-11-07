@@ -15,14 +15,16 @@ export default {
   }
 };
 </script>
+
 <style lang="scss">
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300|Roboto:300");
 * {
   margin: 0;
   padding: 0;
-  font-family:cursive;
+  
 }
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
