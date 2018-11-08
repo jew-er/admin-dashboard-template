@@ -73,9 +73,8 @@ export default {
   overflow: hidden;
   position: absolute;
   right: 0;
-  top:60px;
-  padding: 10px;
-  height: 100%;
+  top: 60px;
+  height: calc(100% - 60px);
   box-sizing: border-box;
 }
 </style>
