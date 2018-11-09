@@ -58,8 +58,8 @@
         <apexcharts width="400" height="200" type="area" :options="chart2Options" :series="chart2Series"></apexcharts>
       </Basiccard>
 
-      <Basiccard title="Revenue"
-      subtitle="For the year 2018"
+      <Basiccard title="Some information"
+      subtitle="For these years"
       bottomnoteicon="command"
       bottomnote="Updated 5 minutes ago"
       height="400px"
