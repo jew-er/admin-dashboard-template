@@ -98,21 +98,21 @@ export default {
   position: absolute;
   box-sizing: border-box;
   display: flex;
-  color: rgba(0, 0, 0, 0.4);
+  color: rgba(0,0,0,0.4);
   justify-content: space-around;
   right: 0;
   .navtop-leftbox {
     height: 100%;
     width: 50%;
-    .navtop-search {
-      display: flex;
-      align-items: center;
-      height: 100%;
-      & input {
-        border: 1px solid rgba(0, 0, 0, 0.4);
-        border-radius: 4px;
+    .navtop-search{
+      display:flex;
+      align-items:center;
+      height:100%;
+      & input{
+        border: 1px solid rgba(0,0,0,0.4);
+        border-radius:4px;
         height: 25px;
-        padding: 0;
+        padding:0;
         width: 40%;
       }
     }
@@ -124,13 +124,13 @@ export default {
     justify-content: space-evenly;
     align-items: flex-start;
     padding-top: 20px;
-    list-style-type: none;
-    li > a {
-      color: rgba(0, 0, 0, 0.4);
-      text-decoration: none;
-      &:hover {
-        color: springgreen;
-      }
+    list-style-type:none;
+    li > a{
+       color: rgba(0,0,0,0.4);
+       text-decoration:none;
+       &:hover{
+         color:springgreen;
+       }
     }
   }
 }
