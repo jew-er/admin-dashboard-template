@@ -1,17 +1,24 @@
 <template>
   <div id="app">
-    <Navmenu/>
-    <transition name="fade">
-    <router-view/>
-    </transition>
+    <div class="app-container">
+      <Navmenu/>
+      <div class="view">
+        <Navtop />
+        <transition name="fade">  
+          <router-view/>
+        </transition>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 import Navmenu from "@/components/Navmenu.vue";
+import Navtop from "@/components/Navtop.vue";
 export default {
   components: {
-    Navmenu
+    Navmenu,
+    Navtop
   }
 };
 </script>
@@ -21,19 +28,42 @@ export default {
 * {
   margin: 0;
   padding: 0;
-  
 }
 #app {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  overflow:hidden;
 }
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .5s;
+
+.app-container{
+  display:flex;
+  flex-direction:row;
+  width:100vw;
+  height:100vh;
+  box-sizing:border-box;
+  overflow:hidden;
+  
 }
-.fade-enter, .fade-leave-to  {
+.view{
+  box-sizing:border-box;
+  overflow-y:scroll;
+  width:100%;
+  flex: 1 1 100%;
+  
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s;
+}
+.fade-enter,
+.fade-leave-to {
   opacity: 0;
+}
+
+@media only screen and (max-width: 800px) {
+ 
 }
 </style>

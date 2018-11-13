@@ -1,41 +1,6 @@
-<template>
-  <div>
-    <div id="navtop">
-      <div class="navtop-leftbox">
-        <div class="navtop-search">
-          <input>
-          <Iconic icon="zoom-in" />
-        </div>
-      </div>
-      <ul class="navtop-rightbox">
-        <li><a href="#">Account</a></li>
-        <li>
-          <Dropdown>
-          <p slot="menu-tag">
-            Dropdown
-          </p>
-          <a href="#" slot="menu-item">
-            An action
-          </a>
-          <a href="#" slot="menu-item">
-            A link
-          </a>
-          <a href="#" slot="menu-item">
-            Somewhere
-          </a>
-          <a href="#" slot="menu-item">
-            Something
-          </a>
-          <a href="#" slot="menu-item">
-            Placeholder
-          </a>
-         </Dropdown>
-        </li>
-        <li><a href="#"> Log Out</a></li>
-      </ul>
-    </div>
-    <div id="nav">     
-            <img class="navbg" v-bind:src="bgpaths[1]">
+<template>  
+    <div v-bind:style="{'background-image': 'url('+ bgpaths[0]+ ')'}" class="nav">     
+            <img class="navbg">
             <div class="logo"> <Iconic icon="magnet" fill="springgreen" /> Vue Template </div>
             <router-link to="/">
               <div>
@@ -61,11 +26,9 @@
               </div>
             </router-link>
       </div>
-    </div>
 </template>
 
 <script>
-import Dropdown from "@/components/Dropdown.vue";
 export default {
   name: "Navmenu",
   data: function() {
@@ -82,69 +45,25 @@ export default {
         "img/backgrounds/bg9.jpeg"
       ]
     };
-  },
-  components: {
-    Dropdown
   }
 };
 </script>
 
 <style lang="scss">
-#navtop {
-  height: 60px;
-  width: calc(100% - 260px);
-  background: white;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
-  position: absolute;
-  box-sizing: border-box;
-  display: flex;
-  color: rgba(0,0,0,0.4);
-  justify-content: space-around;
-  right: 0;
-  .navtop-leftbox {
-    height: 100%;
-    width: 50%;
-    .navtop-search{
-      display:flex;
-      align-items:center;
-      height:100%;
-      & input{
-        border: 1px solid rgba(0,0,0,0.4);
-        border-radius:4px;
-        height: 25px;
-        padding:0;
-        width: 40%;
-      }
-    }
-  }
-  .navtop-rightbox {
-    width: 30%;
-    height: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    padding-top: 20px;
-    list-style-type:none;
-    li > a{
-       color: rgba(0,0,0,0.4);
-       text-decoration:none;
-       &:hover{
-         color:springgreen;
-       }
-    }
-  }
-}
-#nav {
+.nav {
   width: 260px;
+  min-width:260px;
   height: 100vh;
-  position: fixed;
-  background: black;
+  background-size: cover;
+  background-position: 50% 50%;
   color: white;
   display: flex;
+  flex-grow:1;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
   .logo {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(209, 185, 185, 0.5);
     width: 220px;
     padding: 20px;
     margin-bottom: 20px;
@@ -203,6 +122,20 @@ export default {
     z-index: -1;
     object-fit: cover;
     pointer-events: none;
+  }
+}
+
+
+@media only screen and (max-width: 800px) {
+  .nav {
+    width: 0;
+    right: 0;
+    min-width:0;
+    position: relative;
+    z-index: 5;
+    .nav-reveal {
+      width: 260px;
+    }
   }
 }
 </style>

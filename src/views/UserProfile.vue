@@ -53,11 +53,8 @@ export default {
   flex-direction: row;
   justify-content: space-between;
   background: hsla(240, 7%, 81%, 0.15);
-  width: calc(100% - 260px);
+  width: 100%;
   overflow: hidden;
-  position: absolute;
-  right: 0;
-  top:60px;
   padding: 35px;
   box-sizing: border-box;
   min-height: 100vh;

@@ -69,11 +69,8 @@ export default {
   flex-direction: column;
   align-items: center;
   background: hsla(240, 7%, 81%, 0.15);
-  width: calc(100% - 260px);
+  width: 100%;
   overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 60px;
   height: calc(100% - 60px);
   box-sizing: border-box;
 }

@@ -32,7 +32,7 @@ export default {
   position: relative;
 
   input {
-    background: transparent;
+    background: rgba(0,0,0,0.04);
     border: none;
     padding: 5px;
     box-sizing: border-box;
