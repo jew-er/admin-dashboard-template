@@ -28,15 +28,17 @@ export default {
 
 <style lang="scss">
 .inputfield {
-  display: inline-block;
+  display: flex;
+  flex-direction:column-reverse;
   position: relative;
-
+  width:100%;
   input {
-    background: rgba(0,0,0,0.04);
-    border: none;
+    background: white;
+    border: 1px solid #e3e3e3;
+    border-radius:4px;
     padding: 5px;
     box-sizing: border-box;
-    border-bottom: 3px solid grey;
+    height:35px;
   }
 
   input:focus ~ div {
@@ -53,19 +55,19 @@ export default {
 }
 .ilabel {
   color: rgba(0, 0, 0, 0.4);
-  position: absolute;
-  left: 5px;
-  top: 5px;
   pointer-events: none;
   user-select: none;
   transition: 0.2s linear;
+  font-weight:bold;
+  text-align:left;
+  margin-bottom:5px;
 }
 
 .iborder {
   border-bottom: 3px solid crimson;
   position: absolute;
   width: 0;
-  top: 25px;
+  top: 58px;
   left: 50%;
   height: 1px;
   transition: 0.2s linear;
@@ -73,8 +75,8 @@ export default {
 
 .label-active {
   color: crimson;
-  top: -20px;
-  left: 3px;
+  //top: -20px;
+  //left: 3px;
   font-size: 0.9em;
 }
 

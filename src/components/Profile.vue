@@ -34,20 +34,21 @@ export default {
 
 <style lang="scss">
 .profile {
-  width: 30%;
+  width: 100%;
+  height:100%;
   background: white;
   border: 1px solid rgba(0, 0, 0, 0.125);
-  height: 350px;
   border-radius: 4px;
   box-sizing: border-box;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   .profile-cover {
     height: 30%;
     width: 100%;
+    border-radius: 4px 4px 0 0;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -89,6 +90,7 @@ export default {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    align-items:center;
     padding-top: 5px;
     padding-right: 50px;
     font-size: 1.5em;

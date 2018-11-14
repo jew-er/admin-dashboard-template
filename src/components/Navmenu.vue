@@ -1,26 +1,25 @@
 <template>  
     <div v-bind:style="{'background-image': 'url('+ bgpaths[0]+ ')'}" class="nav" :class="{'nav-reveal': navReveal}">     
-            <img class="navbg">
-            <div class="logo"> <Iconic icon="magnet" fill="springgreen" /> Vue Template </div>
+            <div class="logo" v-on:click="hide"> <Iconic icon="magnet" fill="springgreen" /> Vue Template </div>
             <router-link to="/">
-              <div>
+              <div :class="{'disable-click': !navReveal}" v-on:click="hide">
                 <Iconic width="30px" height = "30px" fill="white" icon="home"/>
                 <p>Dashboard</p>
               </div>
             </router-link>
             <router-link to="/UserProfile">
-              <div>
+              <div :class="{'disable-click': !navReveal}" v-on:click="hide">
                 <Iconic width="30px" height = "30px" fill="white" icon="user-3"/>
                 <p>User Profile</p>
               </div>
             </router-link>
             <router-link to="/Maps">
-              <div>
+              <div :class="{'disable-click': !navReveal}" v-on:click="hide">
                 <Iconic width="30px" height = "30px" fill="white" icon="map-1"/>
                 <p>Maps</p>
               </div></router-link>
             <router-link to="/tablelist">
-              <div>
+              <div :class="{'disable-click': !navReveal}" v-on:click="hide">
                 <Iconic width="30px" height = "30px" fill="white" icon="windows-4"/>
                 <p>Table List</p>
               </div>
@@ -52,6 +51,14 @@ export default {
     EventBus.$on("reveal-nav", () => {
       this.navReveal = !this.navReveal;
     });
+  },
+  methods: {
+    hide: function() {
+      //if (window.innerWidth < 800)
+      console.log(window.innerWidth);
+      console.log("NAVMENU HIDE");
+      EventBus.$emit("reveal-nav");
+    }
   }
 };
 </script>
@@ -69,6 +76,7 @@ export default {
   flex-direction: column;
   align-items: center;
   overflow: hidden;
+  z-index:0;
 
   .logo {
     border-bottom: 1px solid rgba(209, 185, 185, 0.5);
@@ -80,6 +88,7 @@ export default {
     padding-left: 20px;
     box-sizing: border-box;
     padding-right: 60px;
+    z-index:2;
   }
   a {
     font-weight: bold;
@@ -89,6 +98,7 @@ export default {
     margin: 2px;
     font-size: 0.8em;
     text-transform: uppercase;
+    z-index:2;
 
     &.router-link-exact-active {
       color: springgreen;
@@ -145,6 +155,16 @@ export default {
   .nav-reveal {
     min-width: 260px;
     width: 260px;
+  }
+
+  .disable-click {
+    pointer-events: none;
+  }
+}
+
+@media only screen and (max-height: 400px) {
+  .nav {
+    overflow-y: scroll;
   }
 }
 </style>

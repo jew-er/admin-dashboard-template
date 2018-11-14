@@ -49,7 +49,6 @@ export default {
   methods: {
     reveal: function() {
       EventBus.$emit("reveal-nav");
-      //this.revealNavBox = !this.revealNavBox;
     }
   },
   components: {
