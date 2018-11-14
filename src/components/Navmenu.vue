@@ -1,5 +1,5 @@
 <template>  
-    <div v-bind:style="{'background-image': 'url('+ bgpaths[0]+ ')'}" class="nav">     
+    <div v-bind:style="{'background-image': 'url('+ bgpaths[0]+ ')'}" class="nav" :class="{'nav-reveal': navReveal}">     
             <img class="navbg">
             <div class="logo"> <Iconic icon="magnet" fill="springgreen" /> Vue Template </div>
             <router-link to="/">
@@ -29,6 +29,7 @@
 </template>
 
 <script>
+import { EventBus } from "../Event.js";
 export default {
   name: "Navmenu",
   data: function() {
@@ -43,8 +44,14 @@ export default {
         "img/backgrounds/bg7.jpg",
         "img/backgrounds/bg8.jpg",
         "img/backgrounds/bg9.jpeg"
-      ]
+      ],
+      navReveal: false
     };
+  },
+  mounted() {
+    EventBus.$on("reveal-nav", () => {
+      this.navReveal = !this.navReveal;
+    });
   }
 };
 </script>
@@ -52,16 +59,17 @@ export default {
 <style lang="scss">
 .nav {
   width: 260px;
-  min-width:260px;
+  min-width: 260px;
   height: 100vh;
   background-size: cover;
   background-position: 50% 50%;
   color: white;
   display: flex;
-  flex-grow:1;
+  flex-grow: 1;
   flex-direction: column;
   align-items: center;
   overflow: hidden;
+
   .logo {
     border-bottom: 1px solid rgba(209, 185, 185, 0.5);
     width: 220px;
@@ -125,17 +133,18 @@ export default {
   }
 }
 
-
 @media only screen and (max-width: 800px) {
   .nav {
     width: 0;
-    right: 0;
-    min-width:0;
-    position: relative;
+    min-width: 0;
+    order: 1;
     z-index: 5;
-    .nav-reveal {
-      width: 260px;
-    }
+    transition: 0.4s ease-in-out;
+  }
+
+  .nav-reveal {
+    min-width: 260px;
+    width: 260px;
   }
 }
 </style>

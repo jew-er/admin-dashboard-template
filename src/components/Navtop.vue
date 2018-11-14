@@ -40,16 +40,16 @@
 
 <script>
 import Dropdown from "@/components/Dropdown.vue";
+import { EventBus } from "../Event.js";
 export default {
   name: "navtop",
   data: function() {
-    return {
-      revealNavBox: false
-    };
+    return {};
   },
   methods: {
     reveal: function() {
-      this.revealNavBox = !this.revealNavBox;
+      EventBus.$emit("reveal-nav");
+      //this.revealNavBox = !this.revealNavBox;
     }
   },
   components: {
@@ -70,8 +70,8 @@ export default {
   justify-content: space-between;
   .hamburger-menu {
     display: none;
-    align-items:center;
-    margin-right:25px;
+    align-items: center;
+    margin-right: 25px;
   }
   .navtop-leftbox {
     height: 100%;
