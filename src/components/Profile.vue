@@ -1,22 +1,18 @@
 <template>
-    <div class="profile">             
-        <div class="profile-cover" :style="{'background-image': 'url('+cover+')'}">
-
-        </div>
-        <div class="profile-pic" :style="{'background-image': 'url('+pic+')'}">
-
-        </div>
-        <div class="profile-content">
-            <div class="profile-name">{{name}}</div>
-            <div class="profile-username">{{username}}</div>
-            <div class="profile-txt">{{content}}</div>
-        </div>
-        <footer>
-            <font-awesome-icon :icon="['fab','facebook']" />
-            <font-awesome-icon :icon="['fab','twitter']" /> 
-            <font-awesome-icon :icon="['fab', 'instagram']" /> 
-        </footer>
+  <div class="profile">
+    <div class="profile-cover" :style="{'background-image': 'url('+cover+')'}"></div>
+    <div class="profile-pic" :style="{'background-image': 'url('+pic+')'}"></div>
+    <div class="profile-content">
+      <div class="profile-name">{{name}}</div>
+      <div class="profile-username">{{username}}</div>
+      <div class="profile-txt">{{content}}</div>
     </div>
+    <footer>
+      <font-awesome-icon :icon="['fab','facebook']"/>
+      <font-awesome-icon :icon="['fab','twitter']"/>
+      <font-awesome-icon :icon="['fab', 'instagram']"/>
+    </footer>
+  </div>
 </template>
 
 <script>
@@ -35,7 +31,7 @@ export default {
 <style lang="scss">
 .profile {
   width: 100%;
-  height:100%;
+  height: 100%;
   background: white;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 4px;
@@ -90,7 +86,7 @@ export default {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    align-items:center;
+    align-items: center;
     padding-top: 5px;
     padding-right: 50px;
     font-size: 1.5em;

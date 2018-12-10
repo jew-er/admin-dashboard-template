@@ -1,41 +1,33 @@
 <template>
-    <div class="navtop">
-      <div class="navtop-leftbox">
-        <div class="navtop-search">
-          <input>
-          <Iconic icon="zoom-in" />
-        </div>
-      </div>
-      <ul class="navtop-rightbox">
-        <li><a href="#">Account</a></li>
-        <li>
-          <Dropdown>
-          <p slot="menu-tag">
-            Dropdown
-          </p>
-          <a href="#" slot="menu-item">
-            An action
-          </a>
-          <a href="#" slot="menu-item">
-            A link
-          </a>
-          <a href="#" slot="menu-item">
-            Somewhere
-          </a>
-          <a href="#" slot="menu-item">
-            Something
-          </a>
-          <a href="#" slot="menu-item">
-            Placeholder
-          </a>
-         </Dropdown>
-        </li>
-        <li><a href="#"> Log Out</a></li>
-      </ul>
-      <div v-on:click="reveal" class="hamburger-menu">
-        <Iconic  width="35px" height="35px" fill="rgba(0,0,0,0.6)" icon="menu" />
+  <div class="navtop">
+    <div class="navtop-leftbox">
+      <div class="navtop-search">
+        <input>
+        <Iconic icon="zoom-in"/>
       </div>
     </div>
+    <ul class="navtop-rightbox">
+      <li>
+        <a href="#">Account</a>
+      </li>
+      <li>
+        <Dropdown>
+          <p slot="menu-tag">Dropdown</p>
+          <a href="#" slot="menu-item">An action</a>
+          <a href="#" slot="menu-item">A link</a>
+          <a href="#" slot="menu-item">Somewhere</a>
+          <a href="#" slot="menu-item">Something</a>
+          <a href="#" slot="menu-item">Placeholder</a>
+        </Dropdown>
+      </li>
+      <li>
+        <a href="#">Log Out</a>
+      </li>
+    </ul>
+    <div v-on:click="reveal" class="hamburger-menu">
+      <Iconic width="35px" height="35px" fill="rgba(0,0,0,0.6)" icon="menu"/>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -133,4 +125,3 @@ export default {
   }
 }
 </style>
-

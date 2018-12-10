@@ -1,6 +1,7 @@
 <template>
-    <div class="tablelist">
-        <datatable :rows="{
+  <div class="tablelist">
+    <datatable
+      :rows="{
             'head': ['Id', 'Name','Salary','Country', 'City'],
             'content': [
                 ['1', 'Dakota Rice', '$36.738', 'Niger', 'Oud-Turnhout'],
@@ -11,15 +12,16 @@
             ]
 
         }"
-        
-        title="Simple plain table"
-        subtitle="Has a filter tho"
-        width="70%"
-        height="40%"
-        :striped=false
-        :plain=true />
+      title="Simple plain table"
+      subtitle="Has a filter tho"
+      width="70%"
+      height="40%"
+      :striped="false"
+      :plain="true"
+    />
 
-        <datatable :rows="{
+    <datatable
+      :rows="{
             'head': ['Id', 'Name','Salary','Country', 'City'],
             'content': [
                 ['1', 'Dakota Rice', '$36.738', 'Niger', 'Oud-Turnhout'],
@@ -30,15 +32,16 @@
             ]
 
         }"
-        
-        title="Simple striped table"
-        subtitle="Has stripes,okay?"
-        width="70%"
-        height="40%"
-        :striped=true
-        :plain=true />
+      title="Simple striped table"
+      subtitle="Has stripes,okay?"
+      width="70%"
+      height="40%"
+      :striped="true"
+      :plain="true"
+    />
 
-        <datatable :rows="{
+    <datatable
+      :rows="{
             'head': ['Id', 'Name','Salary','Country', 'City'],
             'content': [
                 ['1', 'Dakota Rice', '$36.738', 'Niger', 'Oud-Turnhout'],
@@ -49,22 +52,22 @@
             ]
 
         }"
-        
-        title="Table with white background"
-        subtitle="Zebra table"
-        width="70%"
-        height="40%"
-        :striped=true
-        :plain=false />
-    </div>
+      title="Table with white background"
+      subtitle="Zebra table"
+      width="70%"
+      height="40%"
+      :striped="true"
+      :plain="false"
+    />
+  </div>
 </template>
 
 <script>
 import datatable from "@/components/Table.vue";
 export default {
   name: "tablelist",
-  components:{
-      datatable
+  components: {
+    datatable
   }
 };
 </script>
@@ -74,7 +77,7 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items:center;
+  align-items: center;
   background: hsla(240, 7%, 81%, 0.15);
   width: 100%;
   overflow: hidden;
