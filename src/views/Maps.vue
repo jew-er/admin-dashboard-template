@@ -5,17 +5,15 @@
       :center="center"
       style="height: 100%"
       @update:center="centerUpdate"
-      @update:zoom="zoomUpdate">
-      <l-tile-layer
-        :url="url"
-        :attribution="attribution"/>
+      @update:zoom="zoomUpdate"
+    >
+      <l-tile-layer :url="url" :attribution="attribution"/>
       <l-marker :lat-lng="marker">
         <l-popup>
-          <div @click="popupClick">
-            I am a tooltip
-            <p v-show="showParagraph">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed pretium nisl, ut sagittis sapien. Sed vel sollicitudin nisi. Donec finibus semper metus id malesuada.
-            </p>
+          <div @click="popupClick">I am a tooltip
+            <p
+              v-show="showParagraph"
+            >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed pretium nisl, ut sagittis sapien. Sed vel sollicitudin nisi. Donec finibus semper metus id malesuada.</p>
           </div>
         </l-popup>
       </l-marker>

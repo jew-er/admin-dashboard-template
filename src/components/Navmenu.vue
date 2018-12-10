@@ -1,30 +1,49 @@
-<template>  
-    <div v-bind:style="{'background-image': 'url('+ bgpaths[0]+ ')'}" class="nav" :class="{'nav-reveal': navReveal}">     
-            <div class="logo" v-on:click="hide"> <Iconic icon="magnet" fill="springgreen" /> Vue Template </div>
-            <router-link to="/">
-              <div :class="{'disable-click': !navReveal}" v-on:click="hide">
-                <Iconic width="30px" height = "30px" fill="white" icon="home"/>
-                <p>Dashboard</p>
-              </div>
-            </router-link>
-            <router-link to="/UserProfile">
-              <div :class="{'disable-click': !navReveal}" v-on:click="hide">
-                <Iconic width="30px" height = "30px" fill="white" icon="user-3"/>
-                <p>User Profile</p>
-              </div>
-            </router-link>
-            <router-link to="/Maps">
-              <div :class="{'disable-click': !navReveal}" v-on:click="hide">
-                <Iconic width="30px" height = "30px" fill="white" icon="map-1"/>
-                <p>Maps</p>
-              </div></router-link>
-            <router-link to="/tablelist">
-              <div :class="{'disable-click': !navReveal}" v-on:click="hide">
-                <Iconic width="30px" height = "30px" fill="white" icon="windows-4"/>
-                <p>Table List</p>
-              </div>
-            </router-link>
+<template>
+  <div
+    v-bind:style="{'background-image': 'url('+ bgpaths[0]+ ')'}"
+    class="nav"
+    :class="{'nav-reveal': navReveal}"
+  >
+    <div class="logo" v-on:click="hide">
+      <Iconic icon="magnet" fill="springgreen"/>Vue Template
+    </div>
+    <router-link to="/">
+      <div :class="{'disable-click': !navReveal}" v-on:click="hide">
+        <Iconic width="30px" height="30px" fill="white" icon="home"/>
+        <p>Dashboard</p>
       </div>
+    </router-link>
+    <router-link to="/UserProfile">
+      <div :class="{'disable-click': !navReveal}" v-on:click="hide">
+        <Iconic width="30px" height="30px" fill="white" icon="user-3"/>
+        <p>User Profile</p>
+      </div>
+    </router-link>
+    <router-link to="/typography">
+      <div :class="{'disable-click': !navReveal}" v-on:click="hide">
+        <Iconic width="30px" height="30px" fill="white" icon="document"/>
+        <p>Typography</p>
+      </div>
+    </router-link>
+    <router-link to="/Maps">
+      <div :class="{'disable-click': !navReveal}" v-on:click="hide">
+        <Iconic width="30px" height="30px" fill="white" icon="map-1"/>
+        <p>Maps</p>
+      </div>
+    </router-link>
+    <router-link to="/tablelist">
+      <div :class="{'disable-click': !navReveal}" v-on:click="hide">
+        <Iconic width="30px" height="30px" fill="white" icon="windows-4"/>
+        <p>Table List</p>
+      </div>
+    </router-link>
+    <router-link to="/Icons">
+      <div :class="{'disable-click': !navReveal}" v-on:click="hide">
+        <Iconic width="30px" height="30px" fill="white" icon="diamond"/>
+        <p>Icons</p>
+      </div>
+    </router-link>
+  </div>
 </template>
 
 <script>
@@ -55,8 +74,6 @@ export default {
   methods: {
     hide: function() {
       //if (window.innerWidth < 800)
-      console.log(window.innerWidth);
-      console.log("NAVMENU HIDE");
       EventBus.$emit("reveal-nav");
     }
   }
@@ -76,7 +93,7 @@ export default {
   flex-direction: column;
   align-items: center;
   overflow: hidden;
-  z-index:0;
+  z-index: 0;
 
   .logo {
     border-bottom: 1px solid rgba(209, 185, 185, 0.5);
@@ -88,7 +105,7 @@ export default {
     padding-left: 20px;
     box-sizing: border-box;
     padding-right: 60px;
-    z-index:2;
+    z-index: 2;
   }
   a {
     font-weight: bold;
@@ -98,7 +115,7 @@ export default {
     margin: 2px;
     font-size: 0.8em;
     text-transform: uppercase;
-    z-index:2;
+    z-index: 2;
 
     &.router-link-exact-active {
       color: springgreen;

@@ -1,7 +1,9 @@
-<template>  
-   <div 
-   :style="{ 'width': width, 'height': height, 'padding':padding, 'background': background, 'fill':fill }" v-html="require(`./../../public/svg/${icon}.svg`)"></div>
-</template>  
+<template>
+  <div
+    :style="{ 'width': width, 'height': height, 'padding':padding, 'background': background, 'fill':fill }"
+    v-html="require(`./../../public/svg/${icon}.svg`)"
+  ></div>
+</template>
 
 <script>
 export default {
@@ -34,4 +36,8 @@ export default {
 
 
 <style lang="scss">
+svg {
+  width: 100%;
+  height: 100%;
+}
 </style>

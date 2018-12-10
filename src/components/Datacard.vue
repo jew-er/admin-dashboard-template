@@ -1,27 +1,33 @@
 <template>
-    <div class="datacard">
-        <div class="datacard-top">
-            <div class="datacard-i">
-                <Iconic :fill="'hsl('+Math.floor(Math.random()*355)+',100%,60%)'" :icon="dataicon"  width="40px" height="40px"/>
-            </div>
-            <div class="datacard-c">
-                <div>{{ dataname }}</div>
-                <div>{{ datavalue }}</div>
-            </div>
-        </div>
-        <div class="datacard-bot">
-            <Iconic fill="grey" :icon="bottomnoteicon" width="16px" height="16px"/> <p>{{ bottomnote }}</p>
-        </div>
+  <div class="datacard">
+    <div class="datacard-top">
+      <div class="datacard-i">
+        <Iconic
+          :fill="'hsl('+Math.floor(Math.random()*355)+',100%,60%)'"
+          :icon="cardicon"
+          width="40px"
+          height="40px"
+        />
+      </div>
+      <div class="datacard-c">
+        <div>{{ cardname }}</div>
+        <div>{{ cardvalue }}</div>
+      </div>
     </div>
+    <div class="datacard-bot">
+      <Iconic fill="grey" :icon="bottomnoteicon" width="16px" height="16px"/>
+      <p>{{ bottomnote }}</p>
+    </div>
+  </div>
 </template>
 
 <script>
 export default {
   name: "Datacard",
   props: {
-    dataicon: String,
-    dataname: String,
-    datavalue: String,
+    cardicon: String,
+    cardname: String,
+    cardvalue: String,
     bottomnote: String,
     bottomnoteicon: String
   }
@@ -55,7 +61,7 @@ export default {
       padding-top: 20px;
       box-sizing: border-box;
       display: flex;
-      justify-content:center;
+      justify-content: center;
       & {
         font-size: 2em;
         //color: rgb(random(255),random(255),random(255));
@@ -92,8 +98,8 @@ export default {
     width: 90%;
     box-sizing: border-box;
     padding-left: 10px;
-    p{
-      margin-left:10px;
+    p {
+      margin-left: 10px;
     }
   }
 }

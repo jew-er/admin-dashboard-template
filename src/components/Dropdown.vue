@@ -1,13 +1,13 @@
 <template>
-    <div class="dropdown">
-        <div class="dd-btn" v-on:click="showMenu">
-            <slot  name="menu-tag"></slot>
-            <Iconic icon="dropdown" fill="rgba(0,0,0,0.4)" padding="0px" />
-        </div>
-        <div :class="{'reveal-menu': reveal}"  class="dd-list"> 
-            <slot name="menu-item"> </slot>
-        </div>
+  <div class="dropdown">
+    <div class="dd-btn" v-on:click="showMenu">
+      <slot name="menu-tag"></slot>
+      <Iconic icon="dropdown" fill="rgba(0,0,0,0.4)" padding="0px"/>
     </div>
+    <div :class="{'reveal-menu': reveal}" class="dd-list">
+      <slot name="menu-item"></slot>
+    </div>
+  </div>
 </template>
 
 <script>

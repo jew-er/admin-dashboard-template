@@ -27,6 +27,16 @@ export default new Router({
       path: "/tablelist",
       name: "tablelist",
       component: () => import("./views/TableList.vue")
+    },
+    {
+      path: "/typography",
+      name: "Typography",
+      component: () => import("./views/Typography.vue")
+    },
+    {
+      path: "/Icons",
+      name: "Icons",
+      component: () => import("./views/Icons.vue")
     }
   ]
 });
