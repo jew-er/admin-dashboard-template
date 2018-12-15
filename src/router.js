@@ -37,6 +37,11 @@ export default new Router({
       path: "/Icons",
       name: "Icons",
       component: () => import("./views/Icons.vue")
+    },
+    {
+      path: "/Notifications",
+      name: "Notify",
+      component: () => import("./views/Notify.vue")
     }
   ]
 });

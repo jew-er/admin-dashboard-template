@@ -3,8 +3,8 @@
     <div class="app-container" :class="{'push-container': pushView}">
       <Navmenu/>
       <div class="view" :class="{'push-view': pushView}">
-        <Navtop />
-        <transition name="fade">  
+        <Navtop/>
+        <transition name="fade">
           <router-view/>
         </transition>
       </div>
@@ -57,7 +57,6 @@ export default {
   height: 100vh;
   box-sizing: border-box;
   overflow: hidden;
-  
 }
 
 .view {
@@ -66,7 +65,6 @@ export default {
   width: 100vw;
   //flex: 1 1 100%;
 }
-
 
 .fade-enter-active,
 .fade-leave-active {
@@ -78,13 +76,12 @@ export default {
 }
 
 @media only screen and (max-width: 800px) {
-  .app-container{
+  .app-container {
     transition: 0.4s ease-in-out;
   }
   .push-container {
-     width: calc(100vw + 260px);
-     transform: translate(-260px);
-   }
-
+    width: calc(100vw + 260px);
+    transform: translate(-260px);
+  }
 }
 </style>

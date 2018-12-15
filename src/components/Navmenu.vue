@@ -43,6 +43,12 @@
         <p>Icons</p>
       </div>
     </router-link>
+    <router-link to="/Notifications">
+      <div :class="{'disable-click': !navReveal}" v-on:click="hide">
+        <Iconic width="30px" height="30px" fill="white" icon="notification"/>
+        <p>Notifications</p>
+      </div>
+    </router-link>
   </div>
 </template>
 
