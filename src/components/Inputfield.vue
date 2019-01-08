@@ -66,7 +66,7 @@ export default {
 .iborder {
   border-bottom: 3px solid crimson;
   position: absolute;
-  width: 0;
+  width: 0px;
   top: 58px;
   left: 50%;
   height: 1px;
